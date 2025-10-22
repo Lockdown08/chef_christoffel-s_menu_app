@@ -41,6 +41,8 @@ export default function MenuScreen() {
   return (
     <View style={styles.container}>
       <Text style={[styles.title, {textAlign: "center"}]}>Chef Christoffel’s Menu</Text>
+      <Text style={styles.count}>Total Dishes: {filteredDishes.length}</Text>
+
 
       <View style={styles.pickerContainer}>
         <Picker
@@ -91,6 +93,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 10,
   },
+count: {
+  fontSize: 16,
+  color: "#555",
+  marginBottom: 10,
+},
   name: { fontSize: 18, fontWeight: "bold" },
   category: { fontStyle: "italic", color: "#555" },
   description: { marginTop: 5 },
